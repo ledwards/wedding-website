@@ -12,9 +12,9 @@ export default function Header() {
       }
       
       .subtitle {
-      font-family: 'Playfair Display', serif;
-      font-weight: 400;
-      text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        text-align: center;
       }
     `}</style>
 
