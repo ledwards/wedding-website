@@ -4,13 +4,13 @@ import { fetchEntries } from '@utils/contentfulPosts'
 
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import Post from '@components/Post'
+// import Post from '@components/Post'
 
 export default function Home({ posts }) {
   return (
     <div className="container">
       <Head>
-        <title>Lee & Nicole Wedding</title>
+        <title>Lee & Nicole Wedding 9.9.2023</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -50,36 +50,6 @@ export default function Home({ posts }) {
         }
       `}</style>
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-            Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-
-      <style>{`
-        body {
-          font-family: 'Playfair Display', serif;
-        }
-        
-        .title {
-          font-size: 48px;
-          font-weight: 700;
-          text-align: center;
-        }
-
-        .subtitle {
-          font-weight: 400;
-          text-align: center;
-        }
-      `}</style>
     </div>
   )
 }
