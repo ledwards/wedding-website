@@ -19,7 +19,7 @@ export default function Home({ posts }) {
         {/*
         <div className="posts">
           {posts.map((p) => {
-            return <Post key={p.title} title={p.title} image={p.heroImage.fields} body={p.body} />
+            return <Post key={p.id} title={p.title} image={p.heroImage.fields} body={p.body} date={p.date} />
           })}
         </div>
         */}
@@ -57,7 +57,11 @@ export default function Home({ posts }) {
 export async function getStaticProps() {
   const res = await fetchEntries()
   const posts = await res.map((p) => {
-    return p.fields
+    return {
+      id: p.sys.id,
+      date: p.sys.createdAt,
+      ...p.fields
+    }
   })
 
   return {

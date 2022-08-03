@@ -1,4 +1,7 @@
-function Post({ title, image, body }) {
+import * as contentful from 'contentful';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+
+function Post({ title, image, body, date }) {
   let { file, description } = image
 
   return (
@@ -6,8 +9,10 @@ function Post({ title, image, body }) {
       <img alt={description} src={`https:${file.url}`} />
       <div className="description">{description}</div>
       <div className="text">
-        <h3>{title}</h3>
+        <h2>{title}</h2>
+        <h3>{new Date(date).toLocaleDateString('en-us', { year: "numeric", month: "short", day: "numeric" })}</h3>
       </div>
+      {/* <div>{documentToReactComponents(body)}</div > */}
 
       <style jsx>{`
         .post {
