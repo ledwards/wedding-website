@@ -2,9 +2,11 @@ export default function Footer() {
   return (
     <>
       <footer>
-        Made with{' '}
-        <img src="/netliheart.svg" alt="Netlify Logo" className="logo" /> for
-        you
+        <a className="madewith" href="https://github.com/ledwards/wedding-website" target="_blank">
+          Made with{' '}
+          <img src="/netliheart.svg" alt="Netlify Logo" className="logo" /> for
+          you
+        </a>
       </footer>
       <style jsx>{`
         footer {
@@ -14,6 +16,10 @@ export default function Footer() {
           display: flex;
           justify-content: center;
           align-items: center;
+        }
+        
+        .madewith {
+          display: flex;
         }
 
         .logo {
