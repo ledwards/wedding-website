@@ -13,7 +13,7 @@ export default function Header() {
       <h2 className="subtitle">
         Na Aina Kai Botanical Garden <br />
         Kilauea, Kauaʻi <br />
-        9.09.2023
+        09.09.2023
       </h2>
     </div>
     <div className="more">

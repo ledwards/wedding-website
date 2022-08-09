@@ -10,7 +10,7 @@ export default function Home({ posts }) {
   return (
     <div className="container">
       <Head>
-        <title>Lee & Nicole Wedding 9.9.2023</title>
+        <title>Lee & Nicole Wedding 09.09.2023</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
