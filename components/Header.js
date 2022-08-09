@@ -1,7 +1,6 @@
 export default function Header() {
   const scrollToPosts = () => {
-    window.scrollBy({ left: 0, top: window.innerHeight, behavior: "smooth" })
-    return true
+    window.scrollBy({ left: 0, top: window.innerHeight - window.pageYOffset, behavior: "smooth" })
   };
 
   return <div className="header h-screen">
