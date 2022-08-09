@@ -63,7 +63,9 @@ export default function Header() {
         .subtitle {
           font-size: 1.1em;
         }
-        
+      }
+      
+      @supports (-webkit-touch-callout: none) {
         .header {
           height: -webkit-fill-available;
         }
