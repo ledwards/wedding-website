@@ -4,7 +4,7 @@ import { fetchEntries } from '@utils/contentfulPosts'
 
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-// import Post from '@components/Post'
+import Post from '@components/Post'
 
 export default function Home({ posts }) {
   return (
@@ -14,22 +14,21 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className="">
         <Header />
-        {/*
         <div className="posts">
           {posts.map((p) => {
-            return <Post key={p.id} title={p.title} image={p.heroImage.fields} body={p.body} date={p.date} />
+            return <Post key={p.id} title={p.title} image={p.heroImage ? p.heroImage.fields : null} body={p.body} date={p.date} />
           })}
         </div>
-        */}
+
+        <Footer />
       </main>
 
-      <Footer />
 
       <style jsx>{`
         .container {
-          height: 100vh;
+          // height: 100vh;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -37,16 +36,16 @@ export default function Home({ posts }) {
         }
 
         main {
-          padding: 5rem 0;
-          flex: 1;
+          // padding: 5rem 0;
+          // flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          // justify-content: center;
           align-items: center;
         }
 
         .posts {
-          display: flex;
+          // display: flex;
         }
       `}</style>
 

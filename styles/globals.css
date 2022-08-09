@@ -9,3 +9,24 @@ html, body {
 * {
     box-sizing: border-box;
 }
+
+.post {
+    text-align: center;
+}
+
+.post > h2,
+.post > h3 {
+    display: none;
+}
+
+.post .body blockquote {
+    margin: 2em 15%;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.post .body p {
+    margin-bottom: 2em;
+}
+

@@ -20,11 +20,12 @@ export default function Footer() {
         
         .madewith {
           display: flex;
+          font-family: 'Homemade Apple', serif;
         }
 
         .logo {
           height: 1em;
-          margin: 5px;
+          margin: auto 0.5em;
         }
       `}</style>
     </>
