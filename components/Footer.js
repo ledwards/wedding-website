@@ -1,13 +1,12 @@
 export default function Footer() {
   return (
-    <>
-      <footer>
-        <a className="madewith" href="https://github.com/ledwards/wedding-website" target="_blank">
-          Made with{' '}
-          <img src="/netliheart.svg" alt="Netlify Logo" className="logo" /> for
-          you
-        </a>
-      </footer>
+    <footer>
+      <a className="madewith" href="https://github.com/ledwards/wedding-website" target="_blank">
+        Made with{' '}
+        <img src="/netliheart.svg" alt="Netlify Logo" className="logo" /> for
+        you
+      </a>
+
       <style jsx>{`
         footer {
           width: 100%;
@@ -29,6 +28,6 @@ export default function Footer() {
           filter: grayscale(100%);
         }
       `}</style>
-    </>
+    </footer>
   );
 };

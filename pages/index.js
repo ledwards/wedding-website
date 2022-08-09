@@ -11,20 +11,20 @@ export default function Home({ posts }) {
   const feedRef = useRef(null);
 
   return (
-    <div className="container">
+    <app>
       <Head>
         <title>Lee & Nicole Wedding 09.09.2023</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="">
+      <main>
         <Header feedRef={feedRef} />
         <Feed posts={posts} ref={feedRef} />
         <Footer />
       </main>
 
       <style jsx>{`
-        .container {
+        app {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -43,8 +43,7 @@ export default function Home({ posts }) {
           }
         }
       `}</style>
-
-    </div>
+    </app>
   );
 };
 

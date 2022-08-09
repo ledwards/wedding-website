@@ -5,31 +5,27 @@ export default function Header({ feedRef }) {
   };
 
   return (
-    <div className="header h-screen">
-      <div className="header-container">
-        <h1 className="title">
-          Lee & <br />
-          Nicole
-        </h1>
-        <h2 className="subtitle">
-          Na Aina Kai Botanical Garden <br />
-          Kilauea, Kauaʻi <br />
-          09.09.2023
-        </h2>
-      </div>
-      <div className="more">
-        <a onClick={scrollToPosts}>&#8681;</a>
-      </div>
+    <header className="h-screen">
+      <h1>
+        Lee & <br />
+        Nicole
+      </h1>
+      <h2>
+        Na Aina Kai Botanical Garden <br />
+        Kilauea, Kauaʻi <br />
+        09.09.2023
+      </h2>
+      <a onClick={scrollToPosts}>&#8681;</a>
 
       <style jsx>{`
-      .header {
+      header {
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
       }
       
-      .title {
+      h1 {
         font-family: 'Playfair Display', serif;
         font-size: 8em;
         line-height: 0.9em;
@@ -37,49 +33,48 @@ export default function Header({ feedRef }) {
         text-align: center;
       }
       
-      .subtitle {
+      h2 {
         font-family: 'Homemade Apple', serif;
         text-align: center;
         margin-top: 1.5em;
         font-size: 2em;
       }
       
-      .more {
+      a {
         text-align: center;
         cursor: pointer;
         position: absolute;
         width: 100%;
-      }
-      
-      .more {
         bottom: 0.5em;
         font-size: 2em;
       }
       
-      @media only screen and ( max-height: 549px )
-        {
-        .more{
+      @media only screen and ( max-height: 549px ) {
+        a {
           display: none;
+        }
+        
+        header {
+          margin-bottom: 1em;
         }
       }
       
       @media only screen and (max-width: 768px) {
-        .title {
+        h1 {
           font-size: 6em;
         }
         
-        .subtitle {
+        h2 {
           font-size: 1.1em;
         }
       }
       
       @supports (-webkit-touch-callout: none) {
-        .header {
+        header {
           height: -webkit-fill-available;
         }
       }
     `}</style>
-
-    </div >
+    </header>
   );
 };

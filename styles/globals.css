@@ -10,23 +10,23 @@ html, body {
     box-sizing: border-box;
 }
 
-.post {
+post {
     text-align: center;
 }
 
-.post > h2,
-.post > h3 {
+post > h2,
+post > h3 {
     display: none;
 }
 
-.post .body blockquote {
+post .body blockquote {
     margin: 2em 15%;
     font-size: 1.25em;
     font-style: italic;
     font-weight: 400;
 }
 
-.post .body blockquote b {
+post .body blockquote b {
     text-transform: uppercase;
     font-style: normal;
     font-weight: 700;
@@ -34,19 +34,19 @@ html, body {
     letter-spacing: 0.1em;
 }
 
-.post .body h6 {
+post .body h6 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1em;
     letter-spacing: 0.1em;
 }
 
-.post .body p {
+post .body p {
     margin-bottom: 2em;
 }
 
 @media only screen and (max-width: 768px) {
-    .post .body blockquote {
+    post .body blockquote {
         margin: 2em auto;
     }
 }
