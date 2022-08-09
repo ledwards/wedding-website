@@ -28,7 +28,6 @@ export default function Home({ posts }) {
 
       <style jsx>{`
         .container {
-          // height: 100vh;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -36,16 +35,9 @@ export default function Home({ posts }) {
         }
 
         main {
-          // padding: 5rem 0;
-          // flex: 1;
           display: flex;
           flex-direction: column;
-          // justify-content: center;
           align-items: center;
-        }
-
-        .posts {
-          // display: flex;
         }
       `}</style>
 
