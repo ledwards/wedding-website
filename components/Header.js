@@ -20,9 +20,6 @@ export default function Header() {
         justify-content: center;
       }
       
-      .header-container {
-      }
-      
       .title {
         font-family: 'Playfair Display', serif;
         font-size: 4em;
@@ -55,6 +52,10 @@ export default function Header() {
         
         .subtitle {
           font-size: 1em;
+        }
+        
+        .header-container {
+          margin-top: -2.5em;
         }
       }
     `}</style>
