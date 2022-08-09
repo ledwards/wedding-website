@@ -25,7 +25,6 @@ export default function Home({ posts }) {
         <Footer />
       </main>
 
-
       <style jsx>{`
         .container {
           display: flex;

@@ -26,6 +26,7 @@ export default function Header() {
         flex-direction: column;
         justify-content: center;
         position: relative;
+        height: -webkit-fill-available;
       }
       
       .title {
@@ -51,7 +52,7 @@ export default function Header() {
       }
       
       .more {
-        bottom: 1em;
+        bottom: 0.5em;
         font-size: 2em;
       }
       
@@ -63,12 +64,7 @@ export default function Header() {
         .subtitle {
           font-size: 1.1em;
         }
-        
-        .header-container {
-          margin-top: -2.5em;
-        }
       }
     `}</style>
-
   </div >
 }
