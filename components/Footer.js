@@ -26,6 +26,7 @@ export default function Footer() {
         .logo {
           height: 1em;
           margin: auto 0.5em;
+          filter: grayscale(100%);
         }
       `}</style>
     </>

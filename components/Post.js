@@ -24,6 +24,12 @@ function Post({ title, image, body, date }) {
         .post {
           font-family: 'Playfair Display', serif;
         }
+        
+        @media only screen and (max-width: 768px) {
+          .post {
+            margin: auto 5%;
+          }
+        }
       `}</style>
     </div>
   )

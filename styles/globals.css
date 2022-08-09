@@ -26,13 +26,28 @@ html, body {
     font-weight: 400;
 }
 
+.post .body blockquote b {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+.post .body h6 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
 .post .body p {
     margin-bottom: 2em;
 }
 
 @media only screen and (max-width: 768px) {
     .post .body blockquote {
-        margin: 2em 10%;
+        margin: 2em auto;
     }
 }
         
