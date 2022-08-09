@@ -55,6 +55,13 @@ export default function Header({ feedRef }) {
         font-size: 2em;
       }
       
+      @media only screen and ( max-height: 549px )
+        {
+        .more{
+          display: none;
+        }
+      }
+      
       @media only screen and (max-width: 768px) {
         .title {
           font-size: 6em;
