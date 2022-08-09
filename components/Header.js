@@ -1,26 +1,27 @@
 export default function Header({ feedRef }) {
   const scrollToPosts = () => {
-    const comp = feedRef.current
-    window.scrollTo({ left: 0, top: comp.offsetTop, behavior: "smooth" })
+    const comp = feedRef.current;
+    window.scrollTo({ left: 0, top: comp.offsetTop, behavior: "smooth" });
   };
 
-  return <div className="header h-screen">
-    <div className="header-container">
-      <h1 className="title">
-        Lee & <br />
-        Nicole
-      </h1>
-      <h2 className="subtitle">
-        Na Aina Kai Botanical Garden <br />
-        Kilauea, Kauaʻi <br />
-        09.09.2023
-      </h2>
-    </div>
-    <div className="more">
-      <a onClick={scrollToPosts}>&#8681;</a>
-    </div>
+  return (
+    <div className="header h-screen">
+      <div className="header-container">
+        <h1 className="title">
+          Lee & <br />
+          Nicole
+        </h1>
+        <h2 className="subtitle">
+          Na Aina Kai Botanical Garden <br />
+          Kilauea, Kauaʻi <br />
+          09.09.2023
+        </h2>
+      </div>
+      <div className="more">
+        <a onClick={scrollToPosts}>&#8681;</a>
+      </div>
 
-    <style jsx>{`
+      <style jsx>{`
       .header {
         display: flex;
         flex-direction: column;
@@ -79,5 +80,6 @@ export default function Header({ feedRef }) {
       }
     `}</style>
 
-  </div >
-}
+    </div >
+  );
+};

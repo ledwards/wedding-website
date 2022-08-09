@@ -1,5 +1,4 @@
-import * as contentful from 'contentful';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 function Post({ title, image, body, date }) {
   return (
@@ -32,7 +31,7 @@ function Post({ title, image, body, date }) {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default Post
+export default Post;

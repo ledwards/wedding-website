@@ -1,7 +1,7 @@
-import { forwardRef } from 'react'
-import Post from '@components/Post'
+import { forwardRef } from 'react';
+import Post from '@components/Post';
 
-const FeedComponent = function Feed({ posts }, ref) {
+function Feed({ posts }, ref) {
   return (
     <>
       <div ref={ref} className="posts">
@@ -31,7 +31,7 @@ const FeedComponent = function Feed({ posts }, ref) {
         }
       `}</style>
     </>
-  )
+  );
 }
 
-export default forwardRef(FeedComponent)
+export default forwardRef(Feed);

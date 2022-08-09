@@ -1,14 +1,14 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import { fetchEntries } from '@utils/contentfulPosts'
-import { useRef } from 'react'
+import { fetchEntries } from '@utils/contentfulPosts';
+import { useRef } from 'react';
 
-import Header from '@components/Header'
-import Footer from '@components/Footer'
-import Feed from '@components/Feed'
+import Header from '@components/Header';
+import Footer from '@components/Footer';
+import Feed from '@components/Feed';
 
 export default function Home({ posts }) {
-  const feedRef = useRef(null)
+  const feedRef = useRef(null);
 
   return (
     <div className="container">
@@ -45,22 +45,22 @@ export default function Home({ posts }) {
       `}</style>
 
     </div>
-  )
-}
+  );
+};
 
 export async function getStaticProps() {
-  const res = await fetchEntries()
-  const posts = await res.map((p) => {
+  const res = await fetchEntries();
+  const posts = res.map((p) => {
     return {
       id: p.sys.id,
       date: p.sys.createdAt,
       ...p.fields
-    }
+    };
   })
 
   return {
     props: {
       posts,
     },
-  }
-}
+  };
+};
