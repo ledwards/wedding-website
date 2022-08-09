@@ -25,7 +25,7 @@ export default function Header() {
       
       .title {
         font-family: 'Playfair Display', serif;
-        font-size: 48pt;
+        font-size: 4em;
         font-weight: 700;
         text-align: center;
       }
@@ -34,7 +34,7 @@ export default function Header() {
         font-family: 'Homemade Apple', serif;
         text-align: center;
         margin-top: 0.5em;
-        font-size: 13pt;
+        font-size: 1.1em;
       }
       
       .more {
@@ -45,7 +45,17 @@ export default function Header() {
       .more a {
         position: absolute;
         bottom: 0.5em;
-        font-size: 24pt;
+        font-size: 2em;
+      }
+      
+      @media only screen and (max-width: 768px) {
+        .title {
+          font-size: 3.5em;
+        }
+        
+        .subtitle {
+          font-size: 1em;
+        }
       }
     `}</style>
 

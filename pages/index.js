@@ -39,6 +39,12 @@ export default function Home({ posts }) {
           flex-direction: column;
           align-items: center;
         }
+        
+        @media only screen and (max-width: 768px) {
+          main {
+            width: 95%;
+          }
+        }
       `}</style>
 
     </div>

@@ -18,11 +18,17 @@ function Post({ title, image, body, date }) {
 
       <style jsx>{`
         .post {
-          margin: auto 20%;
+          margin: auto 15%;
         }
         
         .post {
           font-family: 'Playfair Display', serif;
+        }
+        
+        @media only screen and (max-width: 768px) {
+          .post {
+            margin: auto 2%;
+          }
         }
       `}</style>
     </div>
