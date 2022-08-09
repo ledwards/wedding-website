@@ -1,12 +1,15 @@
 import Head from 'next/head'
 
 import { fetchEntries } from '@utils/contentfulPosts'
+import { useRef } from 'react'
 
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import Post from '@components/Post'
+import Feed from '@components/Feed'
 
 export default function Home({ posts }) {
+  const feedRef = useRef(null)
+
   return (
     <div className="container">
       <Head>
@@ -15,13 +18,8 @@ export default function Home({ posts }) {
       </Head>
 
       <main className="">
-        <Header />
-        <div className="posts">
-          {posts.map((p) => {
-            return <Post key={p.id} title={p.title} image={p.heroImage ? p.heroImage.fields : null} body={p.body} date={p.date} />
-          })}
-        </div>
-
+        <Header feedRef={feedRef} />
+        <Feed posts={posts} ref={feedRef} />
         <Footer />
       </main>
 

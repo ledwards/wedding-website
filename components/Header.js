@@ -1,6 +1,7 @@
-export default function Header() {
+export default function Header({ feedRef }) {
   const scrollToPosts = () => {
-    window.scrollBy({ left: 0, top: window.innerHeight - window.pageYOffset, behavior: "smooth" })
+    const comp = feedRef.current
+    window.scrollTo({ left: 0, top: comp.offsetTop, behavior: "smooth" })
   };
 
   return <div className="header h-screen">
