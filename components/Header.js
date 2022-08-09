@@ -26,7 +26,6 @@ export default function Header() {
         flex-direction: column;
         justify-content: center;
         position: relative;
-        height: -webkit-fill-available;
       }
       
       .title {
@@ -64,7 +63,12 @@ export default function Header() {
         .subtitle {
           font-size: 1.1em;
         }
+        
+        .header {
+          height: -webkit-fill-available;
+        }
       }
     `}</style>
+
   </div >
 }
