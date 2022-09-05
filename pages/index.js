@@ -11,7 +11,7 @@ export default function Home({ posts }) {
   const feedRef = useRef(null);
 
   return (
-    <app className="flex flex-col">
+    <app className="fullscreen">
       <Head>
         <title>Lee & Nicole Wedding 09.09.2023</title>
         <link rel="icon" href="/favicon.ico" />

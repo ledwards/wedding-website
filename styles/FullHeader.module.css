@@ -1,3 +1,7 @@
+app.fullScreen {
+    margin: 0;
+}
+
 #fullHeader {
     display: flex;
     flex-direction: column;
