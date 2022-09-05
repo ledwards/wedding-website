@@ -16,7 +16,7 @@ export default function RsvpHome() {
           <div className="form w-80">
             <label hidden htmlFor="name">Name</label>
             <input name="name" type="text" placeholder="Find by Name" className={styles.auth} spellCheck={false} autoComplete="off" />
-            <p class={styles.or}>or</p>
+            <p className={styles.or}>or</p>
             <label hidden htmlFor="email">Email</label>
             <input name="email" type="text" placeholder="Find by Email" className={styles.auth} spellCheck={false} autoComplete="off" />
             <button className="submit">RSVP</button>

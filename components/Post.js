@@ -3,7 +3,7 @@ import styles from '../styles/Post.module.css';
 
 function Post({ title, image, body, date }) {
   return (
-    <post class={styles.post}>
+    <post className={styles.post}>
       {image ? (
         <span>
           <img alt={image.description} src={`https:${image.file.url}`} />
