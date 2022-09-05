@@ -1,0 +1,36 @@
+.fieldset {
+    border: 1px solid lightgrey;
+    padding: 1em;
+    margin: 1em;
+    width: 40em;
+    text-align: center;
+}
+
+.fieldset input.nameEmail {
+    width: 45%;
+    font-size: 1em;
+    margin: 0.1em;
+}
+
+.fieldset textarea {
+    font-family: 'Homemade Apple', serif;
+    margin: 1em;
+    padding: 0.5em;
+    border-bottom: 1px solid lightgrey;
+    outline: none;
+    font-size: 1em;
+    line-height: 2em;
+    width: 90%;
+    height: 9em;
+    text-align: left;
+    overflow: auto;
+    resize: none;
+}
+
+.fieldset label {
+    font-family: 'Homemade Apple', serif;
+}
+
+.fieldset input[type=checkbox] {
+    width: min-content;
+}

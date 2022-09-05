@@ -1,0 +1,11 @@
+p.or {
+    font-family: 'Homemade Apple', serif;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+input.auth {
+    margin: 1em;
+    font-size: 1.2em;
+    line-height: 1em;
+}

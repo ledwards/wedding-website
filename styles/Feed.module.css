@@ -1,0 +1,9 @@
+#feed {
+    margin: auto 15% 2em 15%;
+}
+
+@media only screen and (max-width: 768px) {
+    #feed {
+        margin: auto 5%;
+    }
+}

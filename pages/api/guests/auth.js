@@ -15,7 +15,7 @@ export default function handler(req, res) {
         name: fields['Name'],
         email: fields['Email'],
         address: fields['Address'],
-        rsvp: r.fields['RSVP'],
+        rsvp: fields['RSVP'],
         party: fields['Party']
       });
     });
@@ -33,7 +33,7 @@ export default function handler(req, res) {
 
     if (err) {
       console.error(err);
-      res.status(500);
+      res.status(500).send(err);
       return;
     } else {
       res.redirect(307, `/rsvp/edit/${user.id}`);

@@ -1,8 +1,9 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import styles from '../styles/Post.module.css';
 
 function Post({ title, image, body, date }) {
   return (
-    <post>
+    <post class={styles.post}>
       {image ? (
         <span>
           <img alt={image.description} src={`https:${image.file.url}`} />
@@ -14,17 +15,6 @@ function Post({ title, image, body, date }) {
       <h2>{title}</h2>
       <h3>{new Date(date).toLocaleDateString('en-us', { year: "numeric", month: "short", day: "numeric" })}</h3>
       <div className="body">{documentToReactComponents(body)}</div >
-      <style jsx>{`
-        post {
-          font-family: 'Playfair Display', serif;
-        }
-        
-        @media only screen and (max-width: 768px) {
-          post {
-            margin: auto 5%;
-          }
-        }
-      `}</style>
     </post>
   );
 };

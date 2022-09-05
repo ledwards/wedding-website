@@ -1,0 +1,20 @@
+#footer {
+    width: 90%;
+    height: 4em;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.madewith {
+    display: flex;
+    font-family: 'Homemade Apple', serif;
+}
+
+.logo {
+    height: 1em;
+    margin: auto 0.55em;
+    filter: grayscale(100%);
+}

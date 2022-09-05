@@ -3,20 +3,30 @@ import axios from 'axios'
 
 import Head from 'next/head';
 import Footer from '@components/Footer';
-import RsvpFields from '@components/RsvpFields';
+import styles from '../../styles/rsvp.module.css';
 
 export default function RsvpEdit(props) {
   const [currentUser, setCurrentUser] = useState(props.user);
+  const partyMembersNames = [currentUser.name].concat(currentUser.party.map(u => u.name));
+  let joinedPartyMembersNames;
+  if (partyMembersNames.length == 1) {
+    joinedPartyMembersNames = currentUser.name;
+  } else {
+    joinedPartyMembersNames = partyMembersNames.slice(0, -1).join(', ') + ' & ' + partyMembersNames.slice(-1);
+  }
 
   return (
-    <app>
+    <app id={styles.app}>
       <Head>
         <title>RSVP :: Lee & Nicole Wedding 09.09.2023</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1>Thank you!</h1>
+        <h3>Thank you!</h3>
+        <h4>We have the reservation{partyMembersNames.length > 1 ? 's' : ''} for {joinedPartyMembersNames}</h4>
+        <br />
+        <p>Content for logged in people goes here</p>
 
         <Footer />
       </main>

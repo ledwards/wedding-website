@@ -15,6 +15,8 @@ export default async (req, res) => {
 
     if (key == 'id') {
       records[index]['id'] = val;
+    } else if (key == 'RSVP') {
+      records[index]['fields']['RSVP'] = val ? true : false;
     } else {
       records[index]['fields'][key] = val;
     }

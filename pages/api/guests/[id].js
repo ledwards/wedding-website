@@ -6,6 +6,7 @@ export default async (req, res) => {
 
   if (!record) {
     res.status(404).send('Not Found');
+    return;
   }
 
   let obj = {
@@ -13,6 +14,7 @@ export default async (req, res) => {
     name: record.fields['Name'],
     email: record.fields['Email'],
     address: record.fields['Address'],
+    rsvp: record.fields['RSVP'],
     party: []
   };
 
@@ -20,7 +22,6 @@ export default async (req, res) => {
 
   if (recordIds) {
     const filterString = `OR(${recordIds.map(id => `RECORD_ID()='${id}'`).join(",")})`;
-    // const filterString = '';
     const partyMembers = await base('Guests').select({
       view: 'Main View',
       filterByFormula: filterString

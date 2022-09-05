@@ -5,32 +5,36 @@ import Head from 'next/head';
 import Footer from '@components/Footer';
 import RsvpFields from '@components/RsvpFields';
 
+import styles from '../../../styles/rsvp.module.css';
+
 export default function RsvpEdit(props) {
   const [currentUser, setCurrentUser] = useState(props.user);
 
   return (
-    <app>
+    <app id={styles.app}>
       <Head>
         <title>RSVP :: Lee & Nicole Wedding 09.09.2023</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1>Edit Your Invitation</h1>
+        <h3>Edit Your {currentUser.party.length > 0 ? "Party's" : ""} Reservation</h3>
 
         <form action={`/api/guests/update`} method="get">
-          <RsvpFields user={currentUser} index={0} />
+          <div className="form">
+            <RsvpFields user={currentUser} index={0} />
 
-          {currentUser.party.map((u, index) => {
-            return <RsvpFields key={index} user={u} index={index + 1} />
-          })}
+            {currentUser.party.map((u, index) => {
+              return <RsvpFields key={index} user={u} index={index + 1} />
+            })}
 
-          <button>Submit</button>
+            <button className="submit">Submit</button>
+          </div>
         </form>
 
         <Footer />
       </main>
-    </app>
+    </app >
   );
 };
 
