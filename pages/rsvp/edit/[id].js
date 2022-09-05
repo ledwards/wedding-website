@@ -39,7 +39,7 @@ export default function RsvpEdit(props) {
 };
 
 export async function getServerSideProps(context) {
-  const res = await axios.get(`http://localhost:8888/api/guests/${context.query.id}`);
+  const res = await axios.get(`${process.env.SITE_URL}/api/guests/${context.query.id}`);
 
   return {
     props: {
