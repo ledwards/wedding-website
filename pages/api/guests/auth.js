@@ -5,38 +5,32 @@ export default function handler(req, res) {
   const query = req.query;
   let users = [];
 
-  base('Guests').select({
-    view: "Main View"
-  }).eachPage(function page(records, fetchNextPage) {
-    records.forEach(function(record) {
-      const fields = record.fields;
-      users = users.concat({
+  base('Guests').select({ view: 'API View' }).all().then(records => {
+    users = records.map((record) => {
+      return {
         id: record.id,
-        name: fields['Name'],
-        email: fields['Email'],
-        address: fields['Address'],
-        rsvp: fields['RSVP'],
-        party: fields['Party']
-      });
+        name: record.fields['Name'],
+        email: record.fields['Email'],
+        address: record.fields['Address'],
+        rsvp: record.fields['RSVP'],
+        party: record.fields['Party']
+      }
     });
-    fetchNextPage();
 
-  }, function done(err) {
     const user = users.find(u => (u.name && query.name && u.name.toLowerCase() == query.name.toLowerCase()) ||
       (u.email && query.email && u.email.toLowerCase() == query.email.toLowerCase())
     );
 
-    if (!user) {
-      res.status(404).json({});
-      return;
-    }
-
-    if (err) {
-      console.error(err);
-      res.status(500).send(err);
+    if (user) {
+      res.redirect(307, `/rsvp/edit/${user.id}`);
       return;
     } else {
-      res.redirect(307, `/rsvp/edit/${user.id}`);
+      res.status(404).send("Not Found"); // TODO: go back, with an error
+      return;
     }
-  })
+  }).catch(err => {
+    console.error(err);
+    res.status(500).send(err);
+    return;
+  });
 }
