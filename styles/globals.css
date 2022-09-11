@@ -23,6 +23,13 @@ main {
     align-items: center;
 }
 
+error {
+    text-align: center;
+    color: red;
+    border: 1px solid red;
+    padding: 0.5em;
+}
+
 @media only screen and (max-width: 768px) {
     main {
         width: 95%;

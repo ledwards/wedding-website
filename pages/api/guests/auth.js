@@ -25,7 +25,7 @@ export default function handler(req, res) {
       res.redirect(307, `/rsvp/edit/${user.id}`);
       return;
     } else {
-      res.status(404).send("Not Found"); // TODO: go back, with an error
+      res.redirect(307, `/rsvp?error=true`);
       return;
     }
   }).catch(err => {

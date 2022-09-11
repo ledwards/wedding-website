@@ -1,8 +1,12 @@
 import Head from 'next/head';
 import Footer from '@components/Footer';
 import styles from '../../styles/rsvp.module.css';
+import { useRouter } from 'next/router';
 
 export default function RsvpHome() {
+  const router = useRouter();
+  const error = router.query.error;
+
   return (
     <app id={styles.app}>
       <Head>
@@ -11,9 +15,9 @@ export default function RsvpHome() {
       </Head>
       <main>
         <h3>Find Your Invitation</h3>
-
         <form action="/api/guests/auth" method="get">
           <div className="form w-80">
+            {error ? <error>Couldn't find your invitation.</error> : ""}
             <label hidden htmlFor="name">Name</label>
             <input name="name" type="text" placeholder="Find by Name" className={styles.auth} spellCheck={false} autoComplete="off" />
             <p className={styles.or}>or</p>
