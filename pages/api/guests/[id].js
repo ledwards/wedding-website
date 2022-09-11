@@ -23,7 +23,7 @@ export default async (req, res) => {
   if (recordIds) {
     const filterString = `OR(${recordIds.map(id => `RECORD_ID()='${id}'`).join(",")})`;
     const partyMembers = await base('Guests').select({
-      view: 'Main View',
+      view: 'API View',
       filterByFormula: filterString
     }).firstPage();
 
