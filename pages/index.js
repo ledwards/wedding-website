@@ -1,6 +1,6 @@
 import { fetchEntries } from '@utils/contentfulPosts';
 
-import Layout from '@components/layout'
+import Layout from '@components/Layout'
 import Feed from '@components/Feed';
 
 export default function Home({ posts }) {
