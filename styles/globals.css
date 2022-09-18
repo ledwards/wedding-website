@@ -10,19 +10,6 @@ html, body {
     box-sizing: border-box;
 }
 
-app {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 error {
     text-align: center;
     color: red;
@@ -30,21 +17,21 @@ error {
     padding: 0.5em;
 }
 
-@media only screen and (max-width: 768px) {
-    main {
-        width: 95%;
-    }
+a.button {
+    padding: 0.5em 2em;
+    background-color: black;
+    width: fit-content;
+    margin: 1em auto;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.75em;
+}
+
+a.button:hover {
+    background-color: #696969;
 }
 
 /* PAGES */
-
-app {
-  margin: 4em auto;
-}
-
-app main {
-    width: 100vw;
-}
 
 app h3 {
     font-family: 'Playfair Display', serif;

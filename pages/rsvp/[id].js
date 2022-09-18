@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 import Head from 'next/head';
-import Footer from '@components/Footer';
 import styles from '../../styles/rsvp.module.css';
 
 export default function RsvpEdit(props) {
@@ -28,7 +27,6 @@ export default function RsvpEdit(props) {
         <br />
         <p>Content for logged in people goes here</p>
 
-        <Footer />
       </main>
     </app>
   );

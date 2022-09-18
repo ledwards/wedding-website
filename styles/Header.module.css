@@ -1,0 +1,22 @@
+.headerInner h1, .headerInner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.headerInner h1 {
+    margin-top: 5%;
+    font-weight: 700;
+}
+
+.headerInner h2 {
+    margin-bottom: 5%
+}
+
+@supports (-webkit-touch-callout: none) {
+    .headerInner {
+        height: -webkit-fill-available;
+    }
+}

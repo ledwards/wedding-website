@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Footer from '@components/Footer';
 import styles from '../../styles/rsvp.module.css';
 import { useRouter } from 'next/router';
 
@@ -27,7 +26,6 @@ export default function RsvpHome() {
           </div>
         </form>
 
-        <Footer />
       </main>
     </app >
   );

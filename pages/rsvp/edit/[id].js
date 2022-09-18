@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 import Head from 'next/head';
-import Footer from '@components/Footer';
 import RsvpFields from '@components/RsvpFields';
 
 import styles from '../../../styles/rsvp.module.css';
@@ -32,7 +31,6 @@ export default function RsvpEdit(props) {
           </div>
         </form>
 
-        <Footer />
       </main>
     </app >
   );

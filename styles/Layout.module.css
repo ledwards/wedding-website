@@ -1,0 +1,26 @@
+.header {
+    min-width: 450px;
+    position: sticky;
+}
+
+@media only screen and (max-width: 899px),
+            screen and (max-height: 600px) {
+            
+    .header {
+        height: fit-content;
+        overflow: auto;
+        position: static !important;
+    }
+    
+    .contentInner {
+        max-width: 750px;
+        position: inherit;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-height: 600px) {    
+    .header {
+        margin: 0 100vw;
+    }
+}
