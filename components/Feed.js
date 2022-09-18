@@ -1,5 +1,5 @@
-import { forwardRef } from 'react';
-import Post from '@components/Post';
+import { forwardRef } from 'react'
+import Post from '@components/Post'
 
 function Feed({ posts }, ref) {
   return (

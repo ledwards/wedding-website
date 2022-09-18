@@ -1,5 +1,5 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import styles from '../styles/Post.module.css';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import styles from '../styles/Post.module.css'
 
 function Post({ title, image, body, date }) {
   return (

@@ -1,4 +1,4 @@
-import styles from '../styles/RsvpFields.module.css';
+import styles from '../styles/RsvpFields.module.css'
 
 export default function RsvpFields({ user, index }) {
   const suffix = `--${index}`;

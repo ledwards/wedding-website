@@ -17,20 +17,6 @@ error {
     padding: 0.5em;
 }
 
-a.button {
-    padding: 0.5em 2em;
-    background-color: black;
-    width: fit-content;
-    margin: 1em auto;
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 0.75em;
-}
-
-a.button:hover {
-    background-color: #696969;
-}
-
 /* PAGES */
 
 app h3 {

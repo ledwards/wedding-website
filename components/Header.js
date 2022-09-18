@@ -1,6 +1,6 @@
 import Image from 'next/image'
-
-import styles from '../styles/Header.module.css';
+import Button from '@components/Button'
+import styles from '../styles/Header.module.css'
 
 export default function Header() {
   return (
@@ -12,7 +12,7 @@ export default function Header() {
         Kauai, Hawaii
       </h2>
 
-      <a href="/rsvp" className="button">RSVP</a>
+      <Button text="RSVP" href="/rsvp" />
     </div>
   );
 };
