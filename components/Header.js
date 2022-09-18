@@ -12,7 +12,7 @@ export default function Header() {
         Kauai, Hawaii
       </h2>
 
-      <a href="#" className="button">RSVP</a>
+      <a href="/rsvp" className="button">RSVP</a>
     </div>
   );
 };
