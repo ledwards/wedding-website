@@ -4,51 +4,20 @@
 html, body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 * {
     box-sizing: border-box;
 }
 
-error {
-    text-align: center;
-    color: red;
-    border: 1px solid red;
-    padding: 0.5em;
-}
-
 /* PAGES */
 
-app h3 {
+h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 3em;
-    line-height: 0.9em;
+    font-size: 1.5em;
+    line-height: 2em;
     font-weight: 700;
     text-align: center;
     margin-bottom: 0.5em;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form input {
-    font-family: 'Homemade Apple', serif;
-    padding: 0.5em;
-    text-align: center;
-    border-bottom: 1px solid lightgrey;
-    outline: none;
-}
-
-.form .submit {
-    font-family: 'Playfair Display', serif;
-    border: 1px solid lightgrey;
-    margin: 1em;
-}
-
-.form .submit:hover {
-    background-color: black;
-    color: white;
-    outline: none;
 }

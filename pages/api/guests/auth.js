@@ -25,7 +25,7 @@ export default function handler(req, res) {
       res.redirect(307, `/rsvp/edit/${user.id}`);
       return;
     } else {
-      res.redirect(307, `/rsvp?error=true`);
+      res.redirect(307, `/rsvp?error=${encodeURIComponent("Couldn't find your invitation.")}`);
       return;
     }
   }).catch(err => {

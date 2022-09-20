@@ -3,8 +3,12 @@
     position: sticky;
 }
 
-@media only screen and (max-width: 899px),
-            screen and (max-height: 600px) {
+.mobileOnlyScroll {
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1080px),
+       screen and (max-height: 400px) {
             
     .header {
         height: fit-content;
@@ -17,10 +21,12 @@
         position: inherit;
         margin: 0 auto;
     }
-}
-
-@media only screen and (max-height: 600px) {    
-    .header {
-        margin: 0 100vw;
+    
+    .mobileOnlyScroll {
+        overflow: scroll;
+    }
+    
+    .mobileOnlyScroll > content {
+        height: auto;
     }
 }

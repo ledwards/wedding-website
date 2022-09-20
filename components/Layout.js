@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '@components/Header'
 import styles from '../styles/Layout.module.css'
 
-export default function Layout({ children }) {
+export default function Layout({ children, ctaText, ctaHref, scrollable }) {
   return (
     <app className="h-screen flex flex-col justify-center items-center inset-0">
       <Head>
@@ -10,13 +10,13 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-row flex-wrap justify-center items-start h-screen w-screen overflow-auto">
+      <main className={`flex flex-row flex-wrap justify-center items-start h-screen w-screen ${scrollable ? "overflow-auto" : styles.mobileOnlyScroll}`}>
         <header className={`${styles.header} w-5/12 inset-0 h-screen`}>
-          <Header />
+          <Header buttonText={ctaText} buttonHref={ctaHref} />
         </header>
 
-        <content className="relative flex-auto flex-[1_0_50%]">
-          <div className={`${styles.contentInner} absolute p-8`}>
+        <content className={`${scrollable ? "relative" : "h-screen overflow-auto flex flex-col justify-center items-center"} w-7/12 flex-auto`}>
+          <div className={`p-8 ${scrollable ? "absolute" : null} ${styles.contentInner}`}>
             {children}
           </div>
         </content>

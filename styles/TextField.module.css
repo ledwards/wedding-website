@@ -1,0 +1,28 @@
+input.field {
+    border-bottom: 1px solid black;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 1em;
+    padding-bottom: 0.1em;
+    text-align: left;
+    width: 100%;
+}
+
+input.field.hero {
+    font-size: 1.5em;
+    margin-top: 0em;
+    text-align: center;
+}
+
+.label {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.standalone {
+    margin-bottom: 0.5em;
+    border-bottom: none !important;
+}

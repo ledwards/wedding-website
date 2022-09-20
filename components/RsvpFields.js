@@ -1,3 +1,5 @@
+import TextField from '@components/TextField'
+
 import styles from '../styles/RsvpFields.module.css'
 
 export default function RsvpFields({ user, index }) {
@@ -6,17 +8,13 @@ export default function RsvpFields({ user, index }) {
   return (
     <fieldset className={styles.fieldset}>
       <input name={`id${suffix}`} type="hidden" value={user.id} />
+      <TextField name={`Name${suffix}`} label="Name" defaultValue={user.name} hideLabel hero />
+      <TextField name={`Email${suffix}`} label="Email" defaultValue={user.email} />
+      <TextField name={`Address${suffix}`} label="Address" defaultValue={user.address} />
 
-      <label hidden htmlFor={`Name${suffix}`}>Name</label>
-      <input name={`Name${suffix}`} type="text" placeholder="Name" className={styles.nameEmail} defaultValue={user.name} spellCheck={false} />
-
-      <label hidden htmlFor={`Email${suffix}`}>Name</label>
-      <input name={`Email${suffix}`} type="text" placeholder="Email" className={styles.nameEmail} defaultValue={user.email} spellCheck={false} />
-
-      <label hidden htmlFor={`Address${suffix}`}>Name</label>
-      <textarea name={`Address${suffix}`} type="text" placeholder="Address" defaultValue={user.address} spellCheck={false} rows="4" />
-
+      <br /><br />
       <label htmlFor={`RSVP${suffix}`}>Will you be joining us?</label>
       <input name={`RSVP${suffix}`} type="checkbox" defaultChecked={user.rsvp} />
-    </fieldset>);
+    </fieldset>
+  );
 };

@@ -1,32 +1,39 @@
-import Head from 'next/head';
-import styles from '../../styles/rsvp.module.css';
-import { useRouter } from 'next/router';
+import Head from 'next/head'
+import Layout from '@components/Layout'
+import Form from '@components/Form'
+import TextField from '@components/TextField'
+import Submit from '@components/Submit'
+
+import styles from '../../styles/rsvp.module.css'
+import { useRouter } from 'next/router'
 
 export default function RsvpHome() {
   const router = useRouter();
   const error = router.query.error;
 
   return (
-    <app id={styles.app}>
+    <>
       <Head>
         <title>RSVP :: Lee & Nicole Wedding 09.09.2023</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h3>Find Your Invitation</h3>
-        <form action="/api/guests/auth" method="get">
-          <div className="form w-80">
-            {error ? <error>Couldn't find your invitation.</error> : ""}
-            <label hidden htmlFor="name">Name</label>
-            <input name="name" type="text" placeholder="Find by Name" className={styles.auth} spellCheck={false} autoComplete="off" />
-            <p className={styles.or}>or</p>
-            <label hidden htmlFor="email">Email</label>
-            <input name="email" type="text" placeholder="Find by Email" className={styles.auth} spellCheck={false} autoComplete="off" />
-            <button className="submit">RSVP</button>
-          </div>
-        </form>
 
-      </main>
-    </app >
+      <h3>Find Your Invitation</h3>
+      <Form action="/api/guests/auth" method="get" error={error} className={styles.form}>
+        <TextField name="name" label="Name" placeholder="Firstname Lastname" hero />
+        <p className={styles.or}>&mdash;or&mdash;</p>
+        <TextField name="email" label="Email Address" placeholder="you@emailaddress.com" hero />
+        <Submit id="auth" label="Look Me Up" />
+      </Form>
+
+      <p className={styles.footer}>Having trouble? E-mail us at <a href="mailto:aloha@leenicolewedding.com">aloha@leenicolewedding.com</a></p>
+    </>
   );
 };
+
+RsvpHome.getLayout = function getLayout(page) {
+  return (
+    <Layout ctaText="More Details" ctaHref="/">
+      {page}
+    </Layout>
+  )
+}

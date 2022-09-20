@@ -1,11 +1,12 @@
 a.button {
-    padding: 0.5em 2em;
     background-color: black;
-    width: fit-content;
-    margin: 1em auto;
     color: white;
+    display: block;
     font-family: 'Playfair Display', serif;
     font-size: 0.75em;
+    margin: 1em auto;
+    padding: 0.5em 2em;
+    width: fit-content;
 }
 
 a.button:hover {

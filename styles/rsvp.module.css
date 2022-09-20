@@ -1,11 +1,37 @@
-p.or {
-    font-family: 'Homemade Apple', serif;
+p.or, p.footer, p.intro {
+    font-family: 'Playfair Display', serif;
     text-align: center;
-    font-size: 1.5em;
 }
 
-input.auth {
-    margin: 1em;
-    font-size: 1.2em;
-    line-height: 1em;
+p.or {
+    font-size: 1em;
+    margin: 2em;
+    text-transform: uppercase;
+}
+
+p.intro {
+    font-size: 0.75em;
+    margin-top: 1em;
+}
+
+p.footer {
+    font-size: 0.75em;
+    margin-top: 3em;
+}
+
+p.footer a {
+    text-decoration: underline;
+}
+
+p.footer a:hover {
+    text-decoration: none;
+}
+
+.form {
+    border: none;
+    padding: 0 1em;
+}
+
+.form input {
+    color:red;
 }
