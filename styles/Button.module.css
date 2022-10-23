@@ -3,9 +3,9 @@ a.button {
     color: white;
     display: block;
     font-family: 'Playfair Display', serif;
-    font-size: 0.75em;
     margin: 1em auto;
-    padding: 0.5em 2em;
+    padding: 0.75em 3em;
+    font-size: 1em;
     width: fit-content;
 }
 
