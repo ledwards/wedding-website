@@ -15,7 +15,7 @@
         overflow: auto;
         position: static !important;
     }
-    
+        
     .contentInner {
         max-width: 750px;
         position: inherit;
@@ -23,7 +23,8 @@
     }
     
     .mobileOnlyScroll {
-        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
     
     .mobileOnlyScroll > content {
