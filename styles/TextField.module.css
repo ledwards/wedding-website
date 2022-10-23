@@ -1,4 +1,5 @@
 input.field {
+    border-radius: 0;
     border-bottom: 1px solid black;
     font-family: 'Playfair Display', serif;
     font-style: italic;
