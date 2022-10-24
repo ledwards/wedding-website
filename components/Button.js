@@ -4,7 +4,7 @@ function Button({ text, href, onClick, inheritedClass }) {
   return (
     <a
       href={href ? href : "#"}
-      className={`${styles.button} ${inheritedClass}`}
+      className={inheritedClass ? `${styles.button} ${inheritedClass}` : styles.button}
       onClick={onClick}
     >
       {text}

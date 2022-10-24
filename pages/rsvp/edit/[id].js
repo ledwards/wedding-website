@@ -33,7 +33,7 @@ export default function RsvpEdit(props) {
           return <RsvpFields key={index} user={u} index={index + 1} />
         })}
 
-        <Submit id="rsvp" label="Save Response" />
+        <Submit label="Save Response" />
       </Form>
 
     </>
