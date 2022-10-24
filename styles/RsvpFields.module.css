@@ -3,3 +3,9 @@
     margin: 2em;
     padding: 2em 1em;
 }
+
+.fieldset h3 {
+    font-size: 1.25em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
