@@ -1,7 +1,7 @@
 .form {
     border: 1px solid black;
     min-width: 30em;
-    padding: 2em 1em 1.25em 1em;
+    padding: 2.5em 1.75em 0em 1.75em;
 }
 
 .nested {
@@ -17,10 +17,9 @@
     padding: 0.5em;
 }
 
-@media only screen and (max-width: 1080px),
-       screen and (max-height: 400px) {
-           .form {
-               min-width: inherit;
-           }
-       }
+@media only screen and (max-width: 768px) {
+    .form {
+        min-width: inherit;
+    }
+}
        
