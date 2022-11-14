@@ -8,8 +8,8 @@ export default function Header({ buttonText, buttonHref }) {
       <Image src="/date-header.png" width={1500} height={1373} />
       <h1>Lee Edwards & Nicole Wilke</h1>
       <h2>
-        Na Aina Kai Botanical Gardens <br />
-        Kauai, Hawaii
+        Na ‘Āina Kai Botanical Gardens <br />
+        Kaua‘i, Hawai‘i
       </h2>
 
       <Button text={buttonText} href={buttonHref} />

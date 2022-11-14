@@ -8,6 +8,7 @@ export default function Layout({ children, ctaText, ctaHref, scrollable }) {
       <Head>
         <title>Lee Edwards & Nicole Wilke Wedding 09.09.2023</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1" />
       </Head>
 
       <main className={`flex flex-row flex-wrap justify-center items-start h-screen w-screen ${scrollable ? "overflow-y-auto overflow-x-hidden" : styles.mobileOnlyScroll}`}>

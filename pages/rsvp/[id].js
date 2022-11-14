@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 import Head from 'next/head';
+import Layout from '@components/Layout'
 import styles from '../../styles/rsvp.module.css';
 
 export default function RsvpEdit(props) {
@@ -15,21 +16,15 @@ export default function RsvpEdit(props) {
   }
 
   return (
-    <app id={styles.app}>
+    <>
       <Head>
         <title>RSVP :: Lee & Nicole Wedding 09.09.2023</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h3>Thank you!</h3>
-        <h4>We have the reservation{partyMembersNames.length > 1 ? 's' : ''} for {joinedPartyMembersNames}</h4>
-        <br />
-        <p>Content for logged in people goes here</p>
-
-      </main>
-    </app>
-  );
+      <h3>Thank you!</h3>
+      <p>We saved the reservation{partyMembersNames.length > 1 ? 's' : ''} for {joinedPartyMembersNames}</p>
+    </>
+  )
 };
 
 export async function getServerSideProps(context) {
@@ -40,4 +35,12 @@ export async function getServerSideProps(context) {
       user: res.data
     },
   };
+}
+
+RsvpEdit.getLayout = function getLayout(page) {
+  return (
+    <Layout ctaText="More Details" ctaHref="/">
+      {page}
+    </Layout>
+  )
 }
