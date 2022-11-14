@@ -1,0 +1,7 @@
+.thankYou p {
+    text-align: center;
+}
+
+.thankYou p a {
+    text-decoration: underline;
+}

@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import Head from 'next/head';
 import Layout from '@components/Layout'
+import styles from '../../styles/ThankYou.module.css'
 
 export default function RsvpEdit(props) {
   const [currentUser, setCurrentUser] = useState(props.user);
@@ -15,14 +16,16 @@ export default function RsvpEdit(props) {
   }
 
   return (
-    <>
+    <div className={styles.thankYou}>
       <Head>
         <title>RSVP :: Lee & Nicole Wedding 09.09.2023</title>
       </Head>
 
       <h3>Thank you!</h3>
-      <p>We saved the reservation{partyMembersNames.length > 1 ? 's' : ''} for {joinedPartyMembersNames}</p>
-    </>
+      <p>We saved the reservation{partyMembersNames.length > 1 ? 's' : ''} for {joinedPartyMembersNames}.</p>
+      <br />
+      <p>Please <a href="/#content">return to our homepage</a> for more details about the event.</p>
+    </div>
   )
 };
 

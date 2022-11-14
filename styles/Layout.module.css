@@ -15,6 +15,10 @@
         overflow: auto;
         position: static !important;
     }
+    
+    .content {
+        min-height: 100vh;
+    }
         
     .contentInner {
         max-width: 750px;

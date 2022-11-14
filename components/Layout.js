@@ -16,8 +16,9 @@ export default function Layout({ children, ctaText, ctaHref, scrollable }) {
           <Header buttonText={ctaText} buttonHref={`${ctaHref}#content`} />
         </header>
 
-        <content className={`${scrollable ? "relative" : "h-screen overflow-auto flex flex-col justify-center items-center"} w-7/12 flex-auto`}>
-          <a id="content" />
+        <a id="content" />
+
+        <content className={`${styles.content} ${scrollable ? "relative" : "h-screen overflow-auto flex flex-col justify-center items-center"} w-7/12 flex-auto`}>
           <div className={`p-8 ${scrollable ? "absolute" : null} ${styles.contentInner}`}>
             {children}
           </div>
