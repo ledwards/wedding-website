@@ -13,10 +13,11 @@ export default function Layout({ children, ctaText, ctaHref, scrollable }) {
 
       <main className={`flex flex-row flex-wrap justify-center items-start h-screen w-screen ${scrollable ? "overflow-y-auto overflow-x-hidden" : styles.mobileOnlyScroll}`}>
         <header className={`${styles.header} w-5/12 inset-0 h-screen`}>
-          <Header buttonText={ctaText} buttonHref={ctaHref} />
+          <Header buttonText={ctaText} buttonHref={`${ctaHref}#content`} />
         </header>
 
         <content className={`${scrollable ? "relative" : "h-screen overflow-auto flex flex-col justify-center items-center"} w-7/12 flex-auto`}>
+          <a id="content" />
           <div className={`p-8 ${scrollable ? "absolute" : null} ${styles.contentInner}`}>
             {children}
           </div>

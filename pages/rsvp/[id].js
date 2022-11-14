@@ -3,7 +3,6 @@ import axios from 'axios'
 
 import Head from 'next/head';
 import Layout from '@components/Layout'
-import styles from '../../styles/rsvp.module.css';
 
 export default function RsvpEdit(props) {
   const [currentUser, setCurrentUser] = useState(props.user);

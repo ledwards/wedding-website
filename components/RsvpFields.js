@@ -13,8 +13,16 @@ export default function RsvpFields({ user, index }) {
       <TextField name={`Address${suffix}`} label="Address" defaultValue={user.address} />
 
       <br /><br />
-      <label htmlFor={`RSVP${suffix}`}>Will you be joining us?</label>
-      <input name={`RSVP${suffix}`} type="checkbox" defaultChecked={user.rsvp} />
+      <label htmlFor={`RSVP${suffix}`} className={styles.radioButtonSet}>Will you be joining us?</label>
+      <div>
+        <label className={styles.radioLabel}>
+          <input type="radio" value="Yes" name={`RSVP${suffix}`} defaultChecked={user.rsvp == "Yes"} className={styles.radioButton} /> Yes
+        </label>
+        <label className={styles.radioLabel}>
+          <input type="radio" value="No" name={`RSVP${suffix}`} defaultChecked={user.rsvp == "No"} className={styles.radioButton} /> No
+        </label>
+      </div>
+
     </fieldset>
   );
 };

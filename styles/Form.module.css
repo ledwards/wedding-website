@@ -14,7 +14,7 @@
     font-family: 'Playfair Display', serif;
     text-align: center;
     color: red;
-    padding: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 @media only screen and (max-width: 768px) {
