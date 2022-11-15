@@ -25,7 +25,11 @@ export default function RsvpHome() {
         <Submit id="auth" label="Look Me Up" />
       </Form>
 
-      <p className={styles.footer}>Having trouble? E-mail us at <a href="mailto:aloha@leenicolewedding.com">aloha@leenicolewedding.com</a></p>
+      <p className={styles.footer}>
+        Having trouble? E-mail us at <a href="mailto:aloha@leenicolewedding.com">aloha@leenicolewedding.com</a>
+        <br /><br />
+        <a href="/#content">Return home</a> for more wedding information.
+      </p>
     </>
   );
 };

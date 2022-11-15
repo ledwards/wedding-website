@@ -15,7 +15,7 @@
        screen and (max-height: 400px) {
             
     .header {
-        height: fit-content;
+        height: 90vh;
         overflow: auto;
         position: static !important;
     }
