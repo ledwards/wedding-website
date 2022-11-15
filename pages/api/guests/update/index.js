@@ -22,5 +22,5 @@ export default async (req, res) => {
 
   await base('Guests').update(records);
 
-  res.redirect(307, `/rsvp/${records[0].id}#content`);
+  res.redirect(307, `/rsvp/${records[0].id}`);
 }

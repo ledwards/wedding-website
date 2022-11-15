@@ -41,7 +41,7 @@ export async function getServerSideProps(context) {
 
 RsvpEdit.getLayout = function getLayout(page) {
   return (
-    <Layout ctaText="More Details" ctaHref="/">
+    <Layout ctaText="More Details" ctaHref="/" noHeaderOnMobile>
       {page}
     </Layout>
   )

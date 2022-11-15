@@ -21,7 +21,9 @@ export default function RsvpEdit(props) {
       <h3>Early R.S.V.P.</h3>
 
       <p className={styles.intro}>
-        Aloha, {currentUser.name.split(" ")[0]}! We’ve reserved two seats for your party.
+        Aloha, {currentUser.name.split(" ")[0]}!
+        <br />
+        We've reserved {currentUser.party.length + 1} seat{currentUser.party.length > 0 ? "s" : ""} for your party.
         <br />
         Please make sure the information below is accurate, and then click submit.
       </p>
@@ -42,7 +44,7 @@ export default function RsvpEdit(props) {
 
 RsvpEdit.getLayout = function getLayout(page) {
   return (
-    <Layout ctaText="More Details" ctaHref="/" scrollable>
+    <Layout ctaText="More Details" ctaHref="/" scrollable noHeaderOnMobile>
       {page}
     </Layout>
   )

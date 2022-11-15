@@ -32,7 +32,7 @@ export default function RsvpHome() {
 
 RsvpHome.getLayout = function getLayout(page) {
   return (
-    <Layout ctaText="More Details" ctaHref="/">
+    <Layout ctaText="More Details" ctaHref="/" noHeaderOnMobile>
       {page}
     </Layout>
   )
