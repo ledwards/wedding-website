@@ -5,6 +5,7 @@ export default function Document() {
     <Html>
       <Head>
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:0,800" />
       </Head>
       <body>
         <Main />

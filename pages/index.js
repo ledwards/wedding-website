@@ -1,4 +1,4 @@
-import { fetchEntries } from '@utils/contentfulPosts';
+import { fetchEntries } from '@utils/contentful';
 
 import Layout from '@components/Layout'
 import Feed from '@components/Feed';
@@ -18,7 +18,7 @@ Home.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps() {
-  const res = await fetchEntries();
+  const res = await fetchEntries('blogPost');
   const posts = res.map((p) => {
     return {
       id: p.sys.id,

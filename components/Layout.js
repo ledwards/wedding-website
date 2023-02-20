@@ -12,11 +12,9 @@ export default function Layout({ children, ctaText, ctaHref, scrollable, noHeade
       </Head>
 
       <main className={`flex flex-row flex-wrap justify-center items-start h-screen w-screen ${scrollable ? "overflow-y-auto overflow-x-hidden" : styles.mobileOnlyScroll}`}>
-
         <header className={`${styles.header} w-5/12 inset-0 h-screen ${noHeaderOnMobile ? styles.hiddenOnMobile : ""}`}>
           <Header buttonText={ctaText} buttonHref={ctaHref} />
         </header>
-
 
         <a id="content" className={styles.anchor} />
 

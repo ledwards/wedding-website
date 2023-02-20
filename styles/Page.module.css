@@ -1,0 +1,19 @@
+.page h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 0.5em;
+}
+
+.page h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 0.25em;
+}
+
+@media only screen and (max-width: 768px) {
+    .page {
+        margin: auto 5%;
+    }
+}
