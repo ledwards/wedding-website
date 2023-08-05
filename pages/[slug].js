@@ -11,7 +11,7 @@ export default function Content({ post }) {
 
 Content.getLayout = function getLayout(page) {
   return (
-    <Layout ctaText="RSVP" ctaHref="/rsvp" scrollable>
+    <Layout scrollable>
       {page}
     </Layout>
   )

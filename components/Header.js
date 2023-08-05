@@ -16,7 +16,7 @@ export default function Header({ buttonText, buttonHref }) {
         Kaua‘i, Hawai‘i
       </h2>
 
-      <Button text={buttonText} href={buttonHref} />
+      {buttonHref && <Button text={buttonText} href={buttonHref} />}
 
       <div className={styles.more}>
         <a onClick={scrollToPosts}>&#8681;</a>
