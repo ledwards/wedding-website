@@ -19,28 +19,28 @@ export default function SurveyFields({ user, index }) {
       <label htmlFor={`Needs Shuttle${suffix}`} className={styles.question}>Will you be using our shuttles to the venue?</label>
       <div>
         <label className={styles.radioLabel}>
-          <input type="radio" value="Yes" name={`Needs Shuttle${suffix}`} defaultChecked={user.shuttle == "Yes"} className={styles.radioButton} /> Yes
+          <input type="radio" value="true" name={`Needs Shuttle${suffix}`} defaultChecked={user.shuttle} className={styles.radioButton} /> Yes
         </label>
         &nbsp;&nbsp;&nbsp;
         <label className={styles.radioLabel}>
-          <input type="radio" value="No" name={`Needs Shuttle${suffix}`} defaultChecked={user.shuttle == "No"} className={styles.radioButton} /> No
+          <input type="radio" value="false" name={`Needs Shuttle${suffix}`} defaultChecked={user.shuttle == false} className={styles.radioButton} /> No
         </label>
       </div>
 
       <br />
 
-      <label htmlFor={`Pickup Locations${suffix}`} className={styles.radioButtonSet}>If you answered yes, where would you liked to be picked up?</label>
+      <label htmlFor={`Pickup Location${suffix}`} className={styles.radioButtonSet}>If you answered yes, where would you liked to be picked up?</label>
       <div>
         <label className={styles.radioLabel}>
-          <input type="radio" value="The Westin Princeville" name={`Pickup Locations${suffix}`} defaultChecked={user.pickup == "The Westin Princeville"} className={styles.radioButton} /> The Westin Princeville
+          <input type="radio" value="The Westin Princeville" name={`Pickup Location${suffix}`} defaultChecked={user.pickup == "The Westin Princeville"} className={styles.radioButton} /> The Westin Princeville
         </label>
         <br />
         <label className={styles.radioLabel}>
-          <input type="radio" value="Hanalei Bay Resort" name={`Pickup Locations${suffix}`} defaultChecked={user.pickup == "Hanalei Bay Resort"} className={styles.radioButton} /> Hanalei Bay Resort
+          <input type="radio" value="Hanalei Bay Resort" name={`Pickup Location${suffix}`} defaultChecked={user.pickup == "Hanalei Bay Resort"} className={styles.radioButton} /> Hanalei Bay Resort
         </label>
         <br />
         <label className={styles.radioLabel}>
-          <input type="radio" value="1 Hotel" name={`Pickup Locations${suffix}`} defaultChecked={user.pickup == "1 Hotel"} className={styles.radioButton} /> 1 Hotel
+          <input type="radio" value="1 Hotel" name={`Pickup Location${suffix}`} defaultChecked={user.pickup == "1 Hotel"} className={styles.radioButton} /> 1 Hotel
         </label>
       </div>
 

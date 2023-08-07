@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Layout from '@components/Layout'
 import styles from '../../styles/ThankYou.module.css'
 
-export default function RsvpEdit(props) {
+export default function RsvpShow(props) {
   const [currentUser, setCurrentUser] = useState(props.user);
   const partyMembersNames = [currentUser.name].concat(currentUser.party.map(u => u.name));
   let joinedPartyMembersNames;
@@ -39,7 +39,7 @@ export async function getServerSideProps(context) {
   };
 }
 
-RsvpEdit.getLayout = function getLayout(page) {
+RsvpShow.getLayout = function getLayout(page) {
   return (
     <Layout ctaText="More Details" ctaHref="/" noHeaderOnMobile>
       {page}

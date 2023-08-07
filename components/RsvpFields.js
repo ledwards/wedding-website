@@ -16,10 +16,10 @@ export default function RsvpFields({ user, index }) {
       <label htmlFor={`RSVP${suffix}`} className={styles.radioButtonSet}>Will you be joining us?</label>
       <div>
         <label className={styles.radioLabel}>
-          <input type="radio" value="Yes" name={`RSVP${suffix}`} defaultChecked={user.rsvp == "Yes"} className={styles.radioButton} /> Yes
+          <input type="radio" value="true" name={`RSVP${suffix}`} defaultChecked={user.rsvp} className={styles.radioButton} /> Yes
         </label>
         <label className={styles.radioLabel}>
-          <input type="radio" value="No" name={`RSVP${suffix}`} defaultChecked={user.rsvp == "No"} className={styles.radioButton} /> No
+          <input type="radio" value="false" name={`RSVP${suffix}`} defaultChecked={user.rsvp == false} className={styles.radioButton} /> No
         </label>
       </div>
 

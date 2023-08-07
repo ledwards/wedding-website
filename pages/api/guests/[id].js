@@ -15,7 +15,10 @@ export default async (req, res) => {
     email: record.fields['Email'],
     address: record.fields['Address'],
     rsvp: record.fields['RSVP'],
-    party: []
+    party: [],
+    dietary: record.fields['Dietary Restrictions'],
+    shuttle: record.fields['Needs Shuttle'],
+    pickup: record.fields['Pickup Location'],
   };
 
   const recordIds = record.fields['Party'];
@@ -27,13 +30,16 @@ export default async (req, res) => {
       filterByFormula: filterString
     }).firstPage();
 
-    partyMembers.forEach(r => {
+    partyMembers.forEach(pm => {
       obj.party.push({
-        id: r.id,
-        name: r.fields['Name'],
-        email: r.fields['Email'],
-        address: r.fields['Address'],
-        rsvp: r.fields['RSVP']
+        id: pm.id,
+        name: pm.fields['Name'],
+        email: pm.fields['Email'],
+        address: pm.fields['Address'],
+        rsvp: pm.fields['RSVP'],
+        dietary: pm.fields['Dietary Restrictions'],
+        shuttle: pm.fields['Needs Shuttle'],
+        pickup: pm.fields['Pickup Location'],
       });
     });
   }

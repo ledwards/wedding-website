@@ -22,7 +22,7 @@ export default function RsvpHome() {
         <TextField name="name" label="Name" placeholder="Firstname Lastname" hero />
         <p className={styles.or}>&mdash;or&mdash;</p>
         <TextField name="email" label="Email Address" placeholder="you@emailaddress.com" hero />
-        <input type="hidden" name="rsvp" value="survey" />
+        <input type="hidden" name="redirect" value="rsvp" />
         <Submit id="auth" label="Look Me Up" />
       </Form>
 

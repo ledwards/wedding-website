@@ -9,7 +9,7 @@ import Submit from '@components/Submit'
 
 import styles from '../../../styles/rsvp.module.css'
 
-export default function RsvpEdit(props) {
+export default function SurveyEdit(props) {
   const [currentUser, _setCurrentUser] = useState(props.user);
 
   return (
@@ -44,7 +44,7 @@ export default function RsvpEdit(props) {
   );
 };
 
-RsvpEdit.getLayout = function getLayout(page) {
+SurveyEdit.getLayout = function getLayout(page) {
   return (
     <Layout ctaText="More Details" ctaHref="/" scrollable noHeaderOnMobile>
       {page}

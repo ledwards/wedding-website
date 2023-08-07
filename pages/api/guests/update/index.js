@@ -18,6 +18,9 @@ export default async (req, res) => {
     } else {
       records[index]['fields'][key] = val;
     }
+
+    records[index]['fields'][key] == 'true' ? records[index]['fields'][key] = true : records[index]['fields'][key];
+    records[index]['fields'][key] == 'false' ? records[index]['fields'][key] = false : records[index]['fields'][key];
   }
 
   await base('Guests').update(records);
