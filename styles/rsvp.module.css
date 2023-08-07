@@ -12,6 +12,8 @@ p.or {
 
 p.intro {
     font-size: 1em;
+    width: 55%;
+    margin: 0 auto;
 }
 
 p.footer {

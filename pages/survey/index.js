@@ -14,20 +14,18 @@ export default function RsvpHome() {
   return (
     <>
       <Head>
-        <title>RSVP :: Lee & Nicole Wedding 09.09.2023</title>
+        <title>Guest Survey :: Lee & Nicole Wedding 09.09.2023</title>
       </Head>
 
-      <h3>Find Your Invitation</h3>
+      <h3>Look Yourself Up</h3>
       <Form action="/api/guests/auth" method="get" error={error} className={styles.form}>
         <TextField name="name" label="Name" placeholder="Firstname Lastname" hero />
-        <p className={styles.or}>&mdash;or&mdash;</p>
-        <TextField name="email" label="Email Address" placeholder="you@emailaddress.com" hero />
-        <input type="hidden" name="rsvp" value="survey" />
+        <input type="hidden" name="redirect" value="survey" />
         <Submit id="auth" label="Look Me Up" />
       </Form>
 
       <p className={styles.footer}>
-        Having trouble? E-mail us at <a href="mailto:aloha@leenicolewedding.com">aloha@leenicolewedding.com</a>
+        Having trouble? E-mail or text us!
         <br /><br />
         <a href="/#content">Return home</a> for more wedding information.
       </p>

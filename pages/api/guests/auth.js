@@ -13,7 +13,10 @@ export default function handler(req, res) {
         email: record.fields['Email'],
         address: record.fields['Address'],
         rsvp: record.fields['RSVP'],
-        party: record.fields['Party']
+        party: record.fields['Party'],
+        dietary: record.fields['Dietary Restrictions'],
+        shuttle: record.fields['Needs Shuttle'],
+        pickup: record.fields['Pickup Location'],
       }
     });
 
@@ -22,10 +25,10 @@ export default function handler(req, res) {
     );
 
     if (user) {
-      res.redirect(307, `/rsvp/edit/${user.id}`);
+      res.redirect(307, `/${query.redirect}/edit/${user.id}`);
       return;
     } else {
-      res.redirect(307, `/rsvp?error=${encodeURIComponent("Couldn't find your invitation.")}`);
+      res.redirect(307, `/${query.redirect}?error=${encodeURIComponent("Couldn't find your invitation.")}`);
       return;
     }
   }).catch(err => {

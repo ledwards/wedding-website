@@ -1,6 +1,6 @@
 import styles from '../styles/TextField.module.css'
 
-function TextField({ name, label, placeholder, defaultValue, hideLabel, hero }) {
+function TextField({ name, label, placeholder, defaultValue, hideLabel, hero, className }) {
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       document.getElementById("form").submit();
@@ -10,7 +10,7 @@ function TextField({ name, label, placeholder, defaultValue, hideLabel, hero }) 
   return (
     <>
       <input
-        className={`${styles.field} ${hideLabel ? styles.standalone : null} ${hero ? styles.hero : null}`}
+        className={`${className} ${styles.field} ${hideLabel ? styles.standalone : null} ${hero ? styles.hero : null}`}
         name={name}
         type="text"
         placeholder={placeholder}

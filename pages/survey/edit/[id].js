@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import Head from 'next/head'
 import Layout from '@components/Layout'
-import RsvpFields from '@components/RsvpFields'
+import SurveyFields from '@components/SurveyFields'
 import Form from '@components/Form'
 import Submit from '@components/Submit'
 
@@ -15,25 +15,26 @@ export default function RsvpEdit(props) {
   return (
     <>
       <Head>
-        <title>RSVP :: Lee & Nicole Wedding 09.09.2023</title>
+        <title>Survey :: Lee & Nicole Wedding 09.09.2023</title>
       </Head>
 
-      <h3>Early R.S.V.P.</h3>
+      <h3>Complete the Survey</h3>
 
       <p className={styles.intro}>
         Aloha, {currentUser.name.split(" ")[0]}!
-        <br />
+        <br /><br />
         We've reserved {currentUser.party.length + 1} seat{currentUser.party.length > 0 ? "s" : ""} for your party.
-        <br />
-        Please make sure the information below is accurate, and then click submit.
+        <br /><br />
+        Please share any serious dietary restrictions you and your party have so that we can make plans to accomodate them.
+        Let us know where you are staying, so that we can allocate shuttle services accordingly.
       </p>
 
-      <Form action={`/api/guests/update`} method="get" redirect="rsvp" nested>
-        <input type="hidden" name="redirect" value="rsvp" />
-        <RsvpFields user={currentUser} index={0} />
+      <Form action={`/api/guests/update`} method="get" nested>
+        <input type="hidden" name="redirect" value="survey" />
+        <SurveyFields user={currentUser} index={0} />
 
         {currentUser.party.map((u, index) => {
-          return <RsvpFields key={index} user={u} index={index + 1} />
+          return <SurveyFields key={index} user={u} index={index + 1} />
         })}
 
         <Submit label="Save Response" />
