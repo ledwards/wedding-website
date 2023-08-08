@@ -13,32 +13,33 @@
 
 @media only screen and (max-width: 1080px),
        screen and (max-height: 400px) {
-            
+
     .header {
         height: 90vh;
         overflow: auto;
         position: static !important;
     }
-    
+
     .content {
         min-height: 100vh;
     }
-        
+
     .contentInner {
         max-width: 750px;
         position: inherit;
         margin: 0 auto;
+        padding: 0.5em;
     }
-    
+
     .mobileOnlyScroll {
         overflow-x: hidden;
         overflow-y: scroll;
     }
-    
+
     .mobileOnlyScroll > content {
         height: auto;
     }
-    
+
     .hiddenOnMobile {
         display: none;
     }
