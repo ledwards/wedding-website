@@ -7,7 +7,7 @@ import Submit from '@components/Submit'
 import styles from '../../styles/rsvp.module.css'
 import { useRouter } from 'next/router'
 
-export default function RsvpHome() {
+export default function SurveyHome() {
   const router = useRouter();
   const error = router.query.error;
 
@@ -33,7 +33,7 @@ export default function RsvpHome() {
   );
 };
 
-RsvpHome.getLayout = function getLayout(page) {
+SurveyHome.getLayout = function getLayout(page) {
   return (
     <Layout ctaText="More Details" ctaHref="/" noHeaderOnMobile>
       {page}
