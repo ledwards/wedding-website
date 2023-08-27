@@ -45,7 +45,7 @@ export default function RsvpEdit(props) {
 
 RsvpEdit.getLayout = function getLayout(page) {
   return (
-    <Layout ctaText="More Details" ctaHref="/" scrollable noHeaderOnMobile>
+    <Layout scrollable noHeaderOnMobile>
       {page}
     </Layout>
   )

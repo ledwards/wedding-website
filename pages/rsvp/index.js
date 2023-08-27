@@ -29,7 +29,7 @@ export default function RsvpHome() {
           <TextField name="name" label="Name" placeholder="Firstname Lastname" hero />
           <p className={styles.or}>&mdash;or&mdash;</p>
           <TextField name="email" label="Email Address" placeholder="you@emailaddress.com" hero />
-          <input type="hidden" name="redirect" value="rsvp" />
+          <input type="hidden" name="redirect" value="rsvp/edit" />
           <Submit id="auth" label="Look Me Up" />
         </Form>
 
@@ -51,7 +51,7 @@ export default function RsvpHome() {
 
 RsvpHome.getLayout = function getLayout(page) {
   return (
-    <Layout ctaText="More Details" ctaHref="/" noHeaderOnMobile>
+    <Layout noHeaderOnMobile>
       {page}
     </Layout>
   )

@@ -1,6 +1,6 @@
 p.or, p.footer, p.intro {
     font-family: 'Playfair Display', serif;
-    line-height: 1.1em;
+    line-height: 1.25em;
     text-align: center;
 }
 
@@ -14,6 +14,11 @@ p.intro {
     font-size: 1em;
     width: 80%;
     margin: 0 auto;
+}
+
+p.lookup {
+    text-align: center;
+    margin: 0 0 1em 0;
 }
 
 p.footer {

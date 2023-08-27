@@ -15,10 +15,10 @@ export default function SurveyEdit(props) {
   return (
     <>
       <Head>
-        <title>Survey :: Lee & Nicole Wedding 09.09.2023</title>
+        <title>Guest Survey :: Lee & Nicole Wedding 09.09.2023</title>
       </Head>
 
-      <h3>Complete the Survey</h3>
+      <h3>Complete the Guest Survey</h3>
 
       <p className={styles.intro}>
         Aloha, {currentUser.name.split(" ")[0]}!
@@ -30,7 +30,7 @@ export default function SurveyEdit(props) {
       </p>
 
       <Form action={`/api/guests/update`} method="get" nested>
-        <input type="hidden" name="redirect" value="survey" />
+        <input type="hidden" name="redirect" value="survey/edit" />
         <SurveyFields user={currentUser} index={0} />
 
         {currentUser.party.map((u, index) => {
@@ -46,7 +46,7 @@ export default function SurveyEdit(props) {
 
 SurveyEdit.getLayout = function getLayout(page) {
   return (
-    <Layout ctaText="More Details" ctaHref="/" scrollable noHeaderOnMobile>
+    <Layout scrollable noHeaderOnMobile>
       {page}
     </Layout>
   )

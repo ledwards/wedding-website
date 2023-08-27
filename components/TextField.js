@@ -1,6 +1,6 @@
 import styles from '../styles/TextField.module.css'
 
-function TextField({ name, label, placeholder, defaultValue, hideLabel, hero, className }) {
+function TextField({ name, label, placeholder, defaultValue, hideLabel, hero, className, disabled }) {
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       document.getElementById("form").submit();
@@ -18,6 +18,7 @@ function TextField({ name, label, placeholder, defaultValue, hideLabel, hero, cl
         autoComplete="off"
         onKeyDown={handleKeyDown}
         defaultValue={defaultValue}
+        disabled={disabled ? "disabled" : null}
       />
 
       {!hideLabel &&

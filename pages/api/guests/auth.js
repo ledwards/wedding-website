@@ -25,7 +25,7 @@ export default function handler(req, res) {
     );
 
     if (user) {
-      res.redirect(307, `/${query.redirect}/edit/${user.id}`);
+      res.redirect(307, `/${query.redirect}/${user.id}`);
       return;
     } else {
       res.redirect(307, `/${query.redirect}?error=${encodeURIComponent("Couldn't find your invitation.")}`);
