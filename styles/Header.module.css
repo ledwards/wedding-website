@@ -4,6 +4,7 @@
     line-height: 1.5em;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 0.15em;
 }
 
 .headerInner h1 {
@@ -30,10 +31,9 @@
     }
 }
 
-@media only screen and (max-width: 1080px),
+/* @media only screen and (max-width: 1080px),
        screen and (max-height: 400px) {
            .more {
                visibility: visible;
            }
-       }
-       
+           } */
