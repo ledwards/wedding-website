@@ -14,17 +14,15 @@ function ButtonNavigation({ router }) {
         <NavButton text="Frequently Asked Questions" href="/faq" />
       }
 
-      {router.asPath !== '/food-activity' &&
-        <NavButton text="Food & Activity Recommendations" href="/food-activity" />
+      {router.asPath !== '/local-recommendations' &&
+        <NavButton text="Local Recommendations" href="/local-recommendations" />
       }
 
-      {router.asPath !== '/lodging-transportation' &&
-        <NavButton text="Lodging & Transportation Info" href="/lodging-transportation" />
+      {router.asPath !== '/travel-information' &&
+        <NavButton text="Travel Information" href="/travel-information" />
       }
 
-      {router.asPath !== '/registry' &&
-        <NavButton text="Wedding Registry" href="/registry" />
-      }
+      <NavButton text="Wedding Registry" href="https://www.crateandbarrel.com/gift-registry/nicole-wilke-and-lee-edwards/r6745137" target="_blank" />
     </nav>
   );
 }

@@ -20,7 +20,7 @@
        screen and (max-height: 400px) {
 
     .header {
-        height: 90vh;
+        height: 60vh;
         /* overflow: auto; */
         position: static !important;
     }
@@ -33,7 +33,7 @@
         max-width: 750px;
         position: inherit;
         margin: 0 auto;
-        padding: 0.5em;
+        padding: 1em;
     }
 
     .mobileOnlyScroll {
