@@ -1,6 +1,7 @@
 .header {
     min-width: 450px;
     position: sticky;
+    overflow-y: hidden;
 }
 
 .mobileOnlyScroll {
@@ -11,12 +12,16 @@
     display: block;
 }
 
+.contentInner {
+    padding-top: 6em;
+}
+
 @media only screen and (max-width: 1080px),
        screen and (max-height: 400px) {
 
     .header {
         height: 90vh;
-        overflow: auto;
+        /* overflow: auto; */
         position: static !important;
     }
 

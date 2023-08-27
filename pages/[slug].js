@@ -2,6 +2,7 @@ import { fetchEntries } from '@utils/contentful';
 
 import Layout from '@components/Layout'
 import Page from '@components/Page';
+import ButtonNavigation from '@components/ButtonNavigation';
 
 export default function Content({ post }) {
   return (
@@ -13,6 +14,7 @@ Content.getLayout = function getLayout(page) {
   return (
     <Layout scrollable>
       {page}
+      <ButtonNavigation />
     </Layout>
   )
 }

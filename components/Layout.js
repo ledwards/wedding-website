@@ -19,7 +19,7 @@ export default function Layout({ children, ctaText, ctaHref, scrollable, noHeade
         <a id="content" className={styles.anchor} />
 
         <content className={`${styles.content} ${scrollable ? "relative" : "h-screen overflow-auto flex flex-col justify-center items-center"} w-7/12 flex-auto`}>
-          <div className={`p-8 ${scrollable ? "absolute" : null} ${styles.contentInner}`}>
+          <div className={`p-8 ${styles.contentInner}`}>
             {children}
           </div>
         </content>

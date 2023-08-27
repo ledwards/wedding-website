@@ -1,0 +1,22 @@
+a.button {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    background-color: #F5788E;
+    border: 3px solid #FFD0DB;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5em;
+    max-width: 30em;
+    display: block;
+    margin: 1em auto;
+}
+
+a.button:hover {
+    background-color: #000000;
+    border-color: #272727;
+}

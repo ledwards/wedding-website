@@ -1,0 +1,32 @@
+.intro {
+    font-family: 'Playfair Display';
+    text-align: center;
+    color: #000000;
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    font-size: 20px;
+    line-height: 27px;
+
+}
+
+.intro h2 b {
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.intro h2 i {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.intro p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 1em 0;
+}
