@@ -13,41 +13,9 @@
     letter-spacing: 0.1em;
 }
 
-.page h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5em;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-}
-
-.page h4 {
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 0.1em;
-}
-
 .page {
     display: block;
     padding: 4em;
-}
-
-.page ul {
-    margin-top: 0.5em;
-    margin-bottom: 2em;
-}
-
-.page ul li p {
-    margin-bottom: 0.5em;
-}
-
-.page a {
-    text-decoration: underline;
-    text-decoration-color: #FFD0DB;
-    text-decoration-thickness: 3px;
-}
-
-.page a:hover {
-    color: #000000;
-    text-decoration-color: #F5788E;
 }
 
 @media only screen and (max-width: 768px) {
@@ -57,9 +25,5 @@
 
     .page h1 {
         font-size: 1.5em;
-    }
-
-    .page h3 {
-        font-size: 1.25em;
     }
 }

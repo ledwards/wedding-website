@@ -22,11 +22,40 @@ post .body blockquote b {
     letter-spacing: 0.1em;
 }
 
+post h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+post h4 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1em;
+}
+
 post .body h6 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1em;
     letter-spacing: 0.1em;
+}
+
+post .body ul {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+post .body ul li {
+}
+
+post .body ul li p {
+    margin-bottom: 0.5em;
+    display: contents;
+    line-height: 2em;
 }
 
 post .body p {
@@ -35,10 +64,21 @@ post .body p {
 
 post .body a {
     text-decoration: underline;
+    text-decoration-color: #FFD0DB;
+    text-decoration-thickness: 3px;
+}
+
+post .body a:hover {
+    color: #000000;
+    text-decoration-color: #F5788E;
 }
 
 @media only screen and (max-width: 768px) {
     post .body blockquote {
         margin: 2em auto;
+    }
+
+    .page h3 {
+        font-size: 1.25em;
     }
 }
