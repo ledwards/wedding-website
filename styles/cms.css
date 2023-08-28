@@ -77,8 +77,4 @@ post .body a:hover {
     post .body blockquote {
         margin: 2em auto;
     }
-
-    .page h3 {
-        font-size: 1.25em;
-    }
 }

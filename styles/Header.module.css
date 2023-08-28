@@ -16,8 +16,7 @@
     margin-bottom: 5%
 }
 
-@supports (-webkit-touch-callout: none) {
-    .headerInner {
-        height: -webkit-fill-available;
-    }
+.headerInner {
+    max-height: fit-content !important;
+    max-height: -webkit-fit-content !important;
 }

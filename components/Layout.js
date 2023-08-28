@@ -12,14 +12,14 @@ export default function Layout({ children, ctaText, ctaHref, scrollable, noHeade
       </Head>
 
       <main className={`items-center flex flex-row flex-wrap justify-center items-start h-screen w-screen ${scrollable ? "overflow-y-auto overflow-x-hidden" : styles.mobileOnlyScroll}`}>
-        <header className={`flex-1 max-w-3xl ${styles.header} w-5/12 inset-0 h-screen ${noHeaderOnMobile ? styles.hiddenOnMobile : ""}`}>
+        <header className={`flex-1 max-w-4xl ${styles.header} w-5/12 inset-0 h-screen ${noHeaderOnMobile ? styles.hiddenOnMobile : ""}`}>
           <Header buttonText={ctaText} buttonHref={ctaHref} />
         </header>
 
         <a id="content" className={styles.anchor} />
 
-        <content className={`flex-1 max-w-3xl ${styles.content} ${scrollable ? "relative" : "h-screen overflow-auto flex flex-col justify-center items-center"} w-7/12 flex-auto`}>
-          <div className={`p-8  ${styles.contentInner}`}>
+        <content className={`flex-1 max-w-4xl ${styles.content} ${scrollable ? "relative" : "h-screen overflow-auto flex flex-col justify-center items-center"} w-7/12 flex-auto`}>
+          <div className={`p-8 ${styles.contentInner}`}>
             {children}
           </div>
         </content>
