@@ -37,11 +37,8 @@
     list-style-position: inside;
 }
 
-.page ul > li > p {
+.page ul li p {
     margin-bottom: 0.5em;
-}
-
-.page p {
 }
 
 .page a {
@@ -56,7 +53,19 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .page {
-        margin: auto 5%;
+    post.page {
+        padding: 0 1em;
+    }
+
+    .page h1 {
+        font-size: 1.5em;
+    }
+
+    .page h3 {
+        font-size: 1.25em;
+    }
+
+    .page ul {
+        list-style: none;
     }
 }
