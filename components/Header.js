@@ -8,7 +8,7 @@ export default function Header({ buttonText, buttonHref }) {
   };
 
   return (
-    <div className={`${styles.headerInner} flex flex-col justify-center position-relative`}>
+    <div className={`${styles.headerInner} max-w-2xl flex flex-col justify-center position-relative`}>
       <Image src="/date-header.png" width={1500} height={1373} />
       <h1>Lee Edwards & Nicole Wilke</h1>
       <h2>
