@@ -50,12 +50,11 @@ post .body ul {
 }
 
 post .body ul li {
+    margin: 0.25em 0;
 }
 
 post .body ul li p {
-    margin-bottom: 0.5em;
     display: contents;
-    line-height: 2em;
 }
 
 post .body p {
