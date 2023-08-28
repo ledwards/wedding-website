@@ -16,24 +16,8 @@
     margin-bottom: 5%
 }
 
-.more {
-    visibility: hidden;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 0.5em;
-    font-size: 2em;
-}
-
 @supports (-webkit-touch-callout: none) {
     .headerInner {
         height: -webkit-fill-available;
     }
 }
-
-/* @media only screen and (max-width: 1080px),
-       screen and (max-height: 400px) {
-           .more {
-               visibility: visible;
-           }
-           } */

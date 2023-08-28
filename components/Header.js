@@ -15,12 +15,6 @@ export default function Header({ buttonText, buttonHref }) {
         Na ‘Āina Kai Botanical Gardens <br />
         Kaua‘i, Hawai‘i
       </h2>
-
-      {buttonHref && <Button text={buttonText} href={buttonHref} />}
-
-      <div className={styles.more}>
-        <a onClick={scrollToPosts}>&#8681;</a>
-      </div>
     </div>
   );
 };

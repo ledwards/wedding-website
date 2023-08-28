@@ -16,13 +16,13 @@
     max-width: 50em;
 }
 
-@media only screen and (max-width: 1080px),
-       screen and (max-height: 400px) {
-
+@media only screen and (max-width: 1060px) {
     .header {
-        max-height: 60vh;
+        /* max-height: 60vh; */
         /* overflow: auto; */
-        position: static !important;
+        /* position: static !important; */
+        position: unset !important;
+        height: auto;
     }
 
     .content {

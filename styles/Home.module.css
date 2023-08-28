@@ -31,8 +31,8 @@
     margin: 1em 0;
 }
 
-@media only screen and (max-width: 1080px),
-       screen and (max-height: 400px) {
+@media only screen and (max-width: 768px) {
+
            .intro {
                margin-top: 1em;
            }
