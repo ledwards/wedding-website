@@ -13,7 +13,7 @@
 }
 
 .contentInner {
-
+    max-width: 50em;
 }
 
 @media only screen and (max-width: 1080px),

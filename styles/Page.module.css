@@ -27,14 +27,12 @@
 
 .page {
     display: block;
-    padding: 0 4em;
+    padding: 4em;
 }
 
 .page ul {
     margin-top: 0.5em;
     margin-bottom: 2em;
-    list-style-type: circle;
-    list-style-position: inside;
 }
 
 .page ul li p {
@@ -63,9 +61,5 @@
 
     .page h3 {
         font-size: 1.25em;
-    }
-
-    .page ul {
-        list-style: none;
     }
 }

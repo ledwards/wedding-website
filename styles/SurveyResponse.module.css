@@ -1,6 +1,6 @@
 .fieldset {
     border: 1px solid black;
-    margin: 2em 2em 0 2em;
+    margin: 2em 8em 0 8em;
     padding: 1em 0em;
     text-align: center;
 }
@@ -20,10 +20,11 @@
     margin: 1.0em 1.0em -1.0em 0em;
 }
 
-input.answer {
+input.answer[disabled] {
     margin-top: 0;
     text-align: center;
     border: none;
+    background-color: transparent;
 }
 
 @media only screen and (max-width: 768px) {
