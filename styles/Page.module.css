@@ -15,11 +15,11 @@
 
 .page {
     display: block;
-    padding: 4em;
+    padding: 0.5em;
 }
 
 @media only screen and (max-width: 768px) {
-    post.page {
+    .page {
         padding: 0 1em;
     }
 
